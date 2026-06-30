@@ -19,6 +19,22 @@ Para compilar os arquivos `.proto` para Go:
 protoc --go_out=golang --go-grpc_out=golang order/order.proto
 ```
 
+### Geração automatizada (recomendada)
+
+Incluí dois scripts para facilitar a geração dos stubs Go:
+
+- `run_proto.sh` — para ambientes Unix/WSL
+- `run_proto.ps1` — para PowerShell no Windows
+
+Exemplo (PowerShell):
+
+```powershell
+cd microservices-proto
+.\run_proto.ps1
+```
+
+Se `protoc` ou os plugins (`protoc-gen-go`, `protoc-gen-go-grpc`) não estiverem no `PATH`, instale-os antes de rodar os scripts.
+
 ## Serviços Disponíveis
 
 ### Order Service
